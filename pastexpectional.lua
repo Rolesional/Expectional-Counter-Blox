@@ -5486,7 +5486,7 @@ local radius = 10
 			"Settings"	
 		},
 		CheatName = "pastexpectional",
-		UserType = Players.LocalPlayer.name ,
+		UserType = "fixed" ,
 		UIcolors = Themes.default,
 		TextFont = {
 			CheatTextSize = 14,
