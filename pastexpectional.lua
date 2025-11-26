@@ -5485,8 +5485,8 @@ local radius = 10
 			"Misc",
 			"Settings"	
 		},
-		CheatName = "pastexpectional",
-		UserType = "fixed" ,
+		CheatName = "pasteXpectional",
+		UserType = env.login and env.login.username or "USERR",
 		UIcolors = Themes.default,
 		TextFont = {
 			CheatTextSize = 14,
@@ -5928,7 +5928,7 @@ local radius = 10
 		end
 
 		UILibrary:CreateButton({Name = "Name Changer", Tab = "Visuals", Section = "Player"})
-		UILibrary:CreateTextBox({Name = "Change To", Tab = "Visuals", Section = "Player", Default = "pastexpectional User"})
+		UILibrary:CreateTextBox({Name = "Change To", Tab = "Visuals", Section = "Player", Default = "Astralhaxx User"})
 		-- Start character changer loop
 task.spawn(function()
 	while true do
@@ -6261,7 +6261,7 @@ UILibrary:CreateTextBox({Name = "Id", Tab = "Visuals", Section = "Player",Defaul
 		UILibrary:CreateButton({Name = "Keybinds", Tab = "Settings", Section = "Menu Settings", Callback = function(toggled) Library.UI.KeyBindContainer.Visible = toggled end})
 		UILibrary:CreateButton({Name = "Use List Size", Tab = "Settings", Section = "Menu Settings", Callback = function(toggled) Library.UI.UseListSize = toggled end})
 		UILibrary:CreateButton({Name = "Custom Menu Name", Tab = "Settings", Section = "Menu Settings"})
-		UILibrary:CreateTextBox({Name = "Custom Menu Name Text", Tab = "Settings", Section = "Menu Settings", Default = "pastexpectional"})
+		UILibrary:CreateTextBox({Name = "Custom Menu Name Text", Tab = "Settings", Section = "Menu Settings", Default = "astralhaxx"})
 		UILibrary:CreateButton({Name = "Show Debug Info", Tab = "Settings", Section = "Menu Settings"})
 
 		UILibrary:CreateTap({Name = "Set Clipboard Game ID", Tab = "Settings", Section = "Extra", Callback = function() setclipboard('Roblox.GameLauncher.joinGameInstance('..game.PlaceId..',"'..game.JobId..'")') end})
@@ -10623,7 +10623,7 @@ end)
 				local weaponData = replicatedStorage.Weapons[selectedWeapon1]
 				client.secondary = selectedWeapon1
 				client.secondaryowner = localPlayer.Name
-				client.secondaryskin = "pastexpectional"
+				client.secondaryskin = "Astralhaxx"
 				client.secondarystattrak = nil
 			-- client.realgun = selectedWeapon
 				client.vars.ammocount2 = weaponData.Ammo.Value
@@ -10637,7 +10637,7 @@ end)
 				local weaponData = replicatedStorage.Weapons[selectedWeapon]
 				client.primary = selectedWeapon
 				client.primaryowner = localPlayer.Name
-				client.primaryskin = "pastexpectional"
+				client.primaryskin = "Astralhaxx"
 				client.primarystattrak = nil
 				client.realgun = selectedWeapon
 				client.vars.ammocount = weaponData.Ammo.Value
@@ -14218,4 +14218,3 @@ end)
 
 	writefile("bloxsense/bloxsense_configs/" .. "off" .. ".cfg", UILibrary:SaveConfiguration()); 
 	Menu["Settings"]["Configurations"]["Configs"].UpdateValues(getconfigs())
-    
